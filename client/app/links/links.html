@@ -1,3 +1,13 @@
-<div id='container'>
-  <!-- Your html here -->
+<!-- <div id='container' >
+  <form ng-submit="addLink()">
+    <input ng-model="data.url" type="url"></input>
+      <button>Shorten URL</button>
+  </form>
 </div>
+ -->
+<main class="links" ng-repeat="urls in data.links | orderBy: 'visits' : 'reverse'">
+  <a href="{{urls.url}}"><i>{{urls.title.substr(0,53)}}</i></a><br>
+  <b>Shortened:</b>
+  <input readonly="readonly" type="text" value="{{origin}}/api/links/{{urls.code}}" tabindex="2">
+  Hits: {{urls.visits}}
+</main>

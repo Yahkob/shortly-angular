@@ -1,6 +1,11 @@
-<div id='container'>
-<!-- Your code here -->
-
-</div>
-
-
+<div class="row">
+  <div class="col-lg-6">
+    <div class="input-group">
+      <span class="input-group-btn">
+         <button class="btn btn-default" ng-click="addLink()" type="button">
+            Shorten URL
+         </button>
+      </span>
+      <input type="text" class="form-control" ng-model="data.url" placeholder="Please enter a URL">
+    </div>
+  </div>

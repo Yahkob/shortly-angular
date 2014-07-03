@@ -3,7 +3,9 @@ body {
   margin-top: 10px;
   font-family: arial, sans-serif;
 }
-
+.links {
+  padding-bottom: 10px;
+}
 a {
   color: #333;
   font-size: 14px;
@@ -14,7 +16,10 @@ h1 {
   font-style: italic;
   margin-bottom: 10px;
 }
+#navHead {
+  color: white;
 
+}
 .navigation {
   width: 100%;
   height: 40px;
@@ -63,6 +68,8 @@ h1 {
 .link:hover {
   background-color: #efe;
 }
+
+
 
 .link img {
   float: left;
