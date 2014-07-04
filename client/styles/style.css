@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   margin-top: 10px;
@@ -6,10 +7,10 @@ body {
 .links {
   padding-bottom: 10px;
 }
-a {
-  color: #333;
+.urls {
+  color:blue;
   font-size: 14px;
-  text-decoration: none;
+  font-style:italic;
 }
 
 h1 {
@@ -116,11 +117,9 @@ input[type=url] {
   display: inline
 }
 
-
 .error {
-  border: red solid 4px;
-  padding: 10px;
-  margin: 0 10px;
+  box-shadow: inset 0 1px 1px  rgba(172, 34, 44, 0.9),0 0 8px rgba(160, 0, 13, 0.6) !important;
+  border: red solid 0px !important;
 }
 
 .clean {
@@ -147,4 +146,12 @@ input[type=url] {
 
 .creator .message {
   clear: both;
+}
+
+#navHead {
+  color: white !important;
+}
+
+#tabs {
+  color: white;
 }

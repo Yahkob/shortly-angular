@@ -3,20 +3,32 @@
   <head>
     <meta charset="utf-8" />
     <title>Shortly</title>
-    <link rel="stylesheet" type="text/css" href="lib/bootstrap-css-only/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap-css-only/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
   </head>
   <body>
-  <div class="container">
-    <nav class="navbar navbar-inverse" role="navigation">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <a class="navbar-brand" id="navHead" href="#">Shortly</a>
-    </div>
-  </div>
-  </nav>
-  </div>
+    <div class='container'>
+    <nav class="navbar navbar-primary navbar-inverse" role="navigation">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+          </button>
+          <a id="navHead" class="navbar-brand"href="#">Shortly</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a id="tabs" href="#/links">Links</a></li>
+            <li><a id="tabs" href="#/shorten">Shorten</a>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+          <li><a ng-click="signout" href="#">Sign Out</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <div ng-view></div>
     <script>
       document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')

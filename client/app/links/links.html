@@ -1,13 +1,7 @@
-<!-- <div id='container' >
-  <form ng-submit="addLink()">
-    <input ng-model="data.url" type="url"></input>
-      <button>Shorten URL</button>
-  </form>
-</div>
- -->
-<main class="links" ng-repeat="urls in data.links | orderBy: 'visits' : 'reverse'">
-  <a href="{{urls.url}}"><i>{{urls.title.substr(0,53)}}</i></a><br>
+  <input ng-model="searchText" style="float:right" placeholder="Search URLs">
+  <ul ng-repeat="urls in data.links|orderBy:'visits':'reverse'|filter:searchText">
+  <a class="urls" href="{{urls.url}}">{{urls.title.substr(0,49)}}...</a><br>
   <b>Shortened:</b>
   <input readonly="readonly" type="text" value="{{origin}}/api/links/{{urls.code}}" tabindex="2">
   Hits: {{urls.visits}}
-</main>
+</ul>
